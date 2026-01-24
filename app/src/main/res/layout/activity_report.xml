@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sales Report"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Revenue"
+                android:textSize="16sp"
+                android:textColor="#757575"/>
+
+            <TextView
+                android:id="@+id/tvTotalRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.00"
+                android:textSize="36sp"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ជ្រើសរើសថ្ងៃខែដើម្បីមើលរបាយការណ៍"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        app:icon="@android:drawable/ic_menu_today"
+        app:iconGravity="textStart" />
+
+    <Button
+        android:id="@+id/btnMonthlySummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="មើលចំណូលសរុបប្រចាំខែ"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#9C27B0"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        app:icon="@android:drawable/ic_menu_sort_by_size"
+        app:iconGravity="textStart" />
+
+    <Button
+        android:id="@+id/btnSaveReportPdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="រក្សាទុកជារបាយការណ៍ PDF"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#607D8B"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        app:icon="@android:drawable/ic_menu_save"
+        app:iconGravity="textStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sales History"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="ស្វែងរកឈ្មោះទំនិញ ឬអតិថិជន..."
+        android:background="@android:color/white" />
+
+    <ListView
+        android:id="@+id/lvSalesReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#EEEEEE"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white"/>
+
+</LinearLayout>
